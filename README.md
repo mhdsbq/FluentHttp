@@ -1,19 +1,19 @@
-## FluentHttp
+# FluentHttp
 A tiny, DI-less HTTP server library for C#.
 
-### Introduction
+## Introduction
 This is a project for learning and experimenting with building an HTTP server using TCP sockets in c#.
 It aims to provide a simple interface for handling HTTP. Implements a subset of HTTP/1.1 features.
 
-### Goals
+## Goals
 - Simple
 - Fast
 - Explicit
 
-### Spec supported
+## Spec supported
 See [HTTP Specification for FluentHttp](docs/spec.md) for details.
 
-### Usage (Planned)
+## Usage (Planned)
 
 ```csharp
 using FluentHttp;
