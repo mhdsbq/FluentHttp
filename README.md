@@ -1,4 +1,9 @@
-# FluentHttp
+<!-- <div align="center"> -->
+
+![alt text](logo.svg)
+
+<!-- </div> -->
+
 A tiny, DI-less HTTP server library for C#.
 
 ## Introduction

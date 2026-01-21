@@ -1,0 +1,11 @@
+<svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Packet blocks -->
+  <rect x="10" y="30" width="72" height="14" rx="4" fill="#3B82F6"></rect>
+  <rect x="18" y="53" width="64" height="14" rx="4" fill="#22C55E"></rect>
+  <rect x="6" y="76" width="80" height="14" rx="4" fill="#A855F7"></rect>
+
+  <!-- Branding text -->
+  <text x="110" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="36" fill="#3B82F6" font-weight="600">
+    FluentHttp
+  </text>
+</svg>
