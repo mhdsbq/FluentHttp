@@ -1,46 +1,51 @@
-<!-- <div align="center"> -->
-
 ![alt text](logo.svg)
-
-<!-- </div> -->
 
 A tiny, DI-less HTTP server library for C#.
 
 ## Introduction
+
 This is a project for learning and experimenting with building an HTTP server using TCP sockets in c#.
 It aims to provide a simple interface for handling HTTP. Implements a subset of HTTP/1.1 features.
 
 ## Goals
+
 - Simple
 - Fast
 - Explicit
 
 ## Spec supported
-See [HTTP Specification for FluentHttp](docs/spec.md) for details.
+
+See [HTTP Specification for Nila](docs/spec.md) for details.
 
 ## Usage (Planned)
 
 ```csharp
-using FluentHttp;
-
-var app = new HttpServer();
-
-app.Handle("GET", "/ping", (req, res) =>
+var server = new NilaServer();
+server.ProcessAsync(async (ctx, ct) =>
 {
-    res.Write(200, "pong");
+    Console.WriteLine($"{ctx.Request.Method} {ctx.Request.Path}");
+
+    ctx.Response.StatusCode = 200;
+    ctx.Response.Headers["Content-Type"] = "text/plain";
+
+    // Echo request body
+    await foreach (var chunk in ctx.Request.ReadChunksAsync(ct))
+    {
+        await ctx.Response.Body.WriteAsync(chunk, ct);
+    }
 });
 
-app.Handle("GET", "/users/{id}", (req, res) =>
+server.Start(new ServerOptions
 {
-    var userId = req.RouteParams["id"];
-    res.Write(200, $"User ID: {userId}");
+    Port = 8080
 });
-
-app.Handle("POST", "/users", async (req, res) =>
-{
-    var user = await req.Body.AsJsonAsync<User>();
-    res.Write(201, user);
-});
-
-app.Listen("127.0.0.1", port: 8080);
 ```
+
+## Development plan
+
+Using curl's test suite to verify compliance with HTTP/1.1
+https://github.com/curl/curl/tree/master/tests
+
+- Setup the dev server in /dev
+- Implement curl tests one by one and verify compliance
+- Add more features as needed

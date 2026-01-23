@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Nila.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Nila.SpecServer/Nila.SpecServer.csproj" />
+    <Project Path="tests/Nila.UnitTests/Nila.UnitTests.csproj" />
+  </Folder>
+</Solution>

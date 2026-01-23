@@ -1,4 +1,4 @@
-# HTTP Specification for FluentHttp
+# HTTP Specification for Nila
 
 This document defines the subset of **HTTP/1.1** that we implement, with versioning for planned improvements.
 
