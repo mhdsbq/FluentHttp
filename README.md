@@ -31,7 +31,7 @@ server.ProcessAsync(async (ctx, ct) =>
     // Echo request body
     await foreach (var chunk in ctx.Request.ReadChunksAsync(ct))
     {
-        await ctx.Response.Body.WriteAsync(chunk, ct);
+        await ctx.Response.WriteAsync(chunk, ct);
     }
 });
 
@@ -42,10 +42,5 @@ server.Start(new ServerOptions
 ```
 
 ## Development plan
-
-Using curl's test suite to verify compliance with HTTP/1.1
-https://github.com/curl/curl/tree/master/tests
-
-- Setup the dev server in /dev
-- Implement curl tests one by one and verify compliance
-- Add more features as needed
+- Test driven development
+- Define spec and then implement features to meet the spec
