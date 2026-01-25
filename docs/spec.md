@@ -26,7 +26,7 @@ This document defines the subset of **HTTP/1.1** that we implement, with version
 
 ### Request Structure
 
-- [ ] Start-line parsing ([RFC 9112 §3.1](https://www.rfc-editor.org/rfc/rfc9112#section-3.1))
+- [X] Start-line parsing ([RFC 9112 §3.1](https://www.rfc-editor.org/rfc/rfc9112#section-3.1))
 - [ ] Header parsing ([RFC 9112 §4](https://www.rfc-editor.org/rfc/rfc9112#section-4))
 - [ ] Content-Length bodies only ([RFC 9110 §8.3](https://www.rfc-editor.org/rfc/rfc9110#section-8.3))
 - [ ] Chunked encoding — planned for future
@@ -36,10 +36,10 @@ This document defines the subset of **HTTP/1.1** that we implement, with version
 
 ### Response Structure
 
-- [ ] Status line ([RFC 9110 §6.1](https://www.rfc-editor.org/rfc/rfc9110#section-6.1))
-- [ ] Headers ([RFC 9110 §6](https://www.rfc-editor.org/rfc/rfc9110#section-6))
-- [ ] Body optional
-- [ ] Common status codes only: `200, 201, 204, 400, 404, 405, 500, 501` ([RFC 9110 §15](https://www.rfc-editor.org/rfc/rfc9110#section-15))
+- [X] Status line ([RFC 9110 §6.1](https://www.rfc-editor.org/rfc/rfc9110#section-6.1))
+- [X] Headers ([RFC 9110 §6](https://www.rfc-editor.org/rfc/rfc9110#section-6))
+- [X] Body optional
+- [X] Common status codes only: `200, 201, 204, 400, 404, 405, 500, 501` ([RFC 9110 §15](https://www.rfc-editor.org/rfc/rfc9110#section-15))
 
 ---
 
